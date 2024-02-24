@@ -30,8 +30,8 @@ string highAndLow(const string& numbers) {
         return "";
     }
 
-    int highest = *std::max_element(nums.begin(), nums.end());
-    int lowest = *std::min_element(nums.begin(), nums.end());
+    int highest = *max_element(nums.begin(), nums.end());
+    int lowest = *min_element(nums.begin(), nums.end());
 
     return to_string(highest) + " " + to_string(lowest);
 }
