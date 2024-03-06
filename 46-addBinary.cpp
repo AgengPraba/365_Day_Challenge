@@ -16,15 +16,18 @@
 using namespace std;
 
 string add_binary(uint64_t a, uint64_t b) {
-  int sum=a+b;
-  
+  uint64_t sum=a+b;
   string res;
   
+  if(sum==0){
+    return "0";
+  }else{
   while (sum>0){
-  int sisa=sum%2;
-     res += (sisa == 0) ? '0' : '1';  
+    uint64_t sisa=sum%2;
+    res += (sisa == 0) ? '0' : '1';  
     sum/=2;
-  }
+    }
   reverse(res.begin(),res.end());
   return res;
+  }
 }
