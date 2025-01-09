@@ -12,10 +12,14 @@
 # is_prime(-1) /* false */
 
 def is_prime(num):
-    if num < 2 :
+    if num < 2:
         return False
-    else :
-         for i in range(2, num):
-            if num % i == 0:
-                return False
+    if num == 2:
+        return True
+    if num % 2 == 0:
+        return False
+    sqrt_num = int(num ** 0.5)
+    for i in range(3, sqrt_num + 1, 2):
+        if num % i == 0:
+            return False
     return True
